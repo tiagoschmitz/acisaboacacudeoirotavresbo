@@ -1,0 +1,103 @@
+mantenedora(razaoSocialMantenedora varchar(75), 
+            cnpjMantenedora(pk)  char(14))
+
+mantida    (cnpjMantida(pk) char(14), 
+            razaoSocialMantida varchar(75),
+            nomeFantasiaMantida varchar(75),
+            enderecoMantida varchar(75),
+            nroMantida int,
+            cepMantida char(8),
+            municipioMantida CODIGOIBGE(tabela IBGE), 
+            siteMantida varchar(75), 
+            emailMantida varchar(75), 
+            telefoneFixoMantida char(11), 
+            telefoneCelularMantida char(11),
+            responsavelDados varchar(75),
+            telefoneResponsavel char(11), 
+            secretarioMantida char(11),
+            telefoneSecretarioMantida  char(11),
+            DiretorMantida  varchar(75),
+            telefoneDiretorMantida  char(11),
+            dependenciaAdministrativa  char(7)(publico/privada),
+            corpoAdministrativo int, 
+            corpoDocente int, 
+            corpoOutros int, 
+            participouEducacenso boolean,
+            cnpjMantenedora(fk) char(14))
+
+atos (  cnpjMantida(pfk) char(14), 
+        dataExpedicao(pk) data, 
+        orgaoExpedidor(pk) varchar(75),
+        nroAto(pk)  varchar(25),
+        tipoAto  varchar(10),
+        DescricaoAto  varchar(30))
+
+membrosComissao ( cnpjMantida(pfk) char(14),
+                  nome(pk) varchar(75), 
+                  dataExpedicao(fk) data, 
+                  orgaoExpedidor(fk) varchar(75),
+                  nroAto(fk) varchar(25))
+
+dadosEducacionais ( codigoDadosEducacionais(pk) int, 
+                    cnpjMantida(fk)  char(14), 
+                    idModalidadeEnsino(fk) int,  
+                    turno  char(10) (matutino/vespertino/noturno),
+                    nroAlunos int, 
+                    nroTurmas int)
+
+modalidadeEnsino ( idModalidadeEnsino(fk) int,
+                   descricao varchar(35) )
+
+infraestrutura ( codigoInfraestrutura(pk),
+                 cnpjMantida(fk)  char(14), 
+                 codigoAmbiente (fk) varchar(75),
+                 quantidade, 
+                 descricaoOpcional
+                )
+
+formularioAvaliacao ( versaoFormulario (pk) int
+                    )
+
+dimensao (  idDimensao (pk) int, 
+            versaoFormulario (pk) int,
+            descricaoDimensao varchar(75)
+         )
+
+indicador ( idIndicador (pk) int,  
+            idDimensao (pfk) int, 
+            versaoFormulario (pk) int,
+            descricaoIndicador varchar(75),
+            glossario varchar(700)
+          )
+
+conceitoIndicador ( idIndicador (pfk) int,  
+                    idDimensao  (pfk) int, 
+                    versaoFormulario (pk) int,
+                    descricaoConceito varchar(20),
+                    qtdMinima int,
+                    qtdMaxima int,                    
+          )
+
+criterio (  idcriterio (pk) int,  
+            idIndicador (pfk) int,  
+            idDimensao (pfk) int, 
+            versaoFormulario (pk) int,
+            descricaoCriterio varchar(75)
+         )
+
+RespostaAvaliacao ( idcriterio  (pfk) int,  
+                    idIndicador (pfk) int,  
+                    idDimensao  (pfk) int,                 
+                    versaoFormulario (pk) int,
+                    cnpjMantida (pfk) char(14),
+                    dataAvaliacao (pk) data             
+                    respostaCriterio boolean            
+          )
+
+RelatoAvaliacaoDimensao ( idDimensao  (pfk) int,                 
+                          cnpjMantida (pfk) char(14),
+                          dataAvaliacao(pk) data,            
+                          relatoDimensao varchar(2000)
+                        )
+        
+
