@@ -41,7 +41,7 @@ membrosComissao ( cnpjMantida(pfk) char(14),
 dadosEducacionais ( codigoDadosEducacionais(pk) int, 
                     cnpjMantida(fk)  char(14), 
                     idModalidadeEnsino(fk) int,  
-                    turno  char(10) (matutino/vespertino/noturno),
+                    turno  char(10) (matutino/vespertino/noturno/nSeAplica),
                     nroAlunos int, 
                     nroTurmas int)
 
@@ -61,6 +61,10 @@ formularioAvaliacao ( versaoFormulario (pk) int
 dimensao (  idDimensao (pk) int, 
             versaoFormulario (pk) int,
             descricaoDimensao varchar(75)
+         )
+
+ambiente(  idAmbiente (pk) int, 
+           descricaoAmbiente varchar(75)
          )
 
 indicador ( idIndicador (pk) int,  
