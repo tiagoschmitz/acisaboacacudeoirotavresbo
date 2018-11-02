@@ -1,8 +1,7 @@
-package com.udesc.bolsa.backend.model;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;

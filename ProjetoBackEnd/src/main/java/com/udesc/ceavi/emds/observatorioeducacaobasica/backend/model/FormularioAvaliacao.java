@@ -1,4 +1,4 @@
-package com.udesc.bolsa.backend.model;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.udesc.bolsa.backend;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.backend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
