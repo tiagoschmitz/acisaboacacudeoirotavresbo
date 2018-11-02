@@ -38,7 +38,7 @@ membrosComissao ( cnpjMantida(pfk) char(14),
                   orgaoExpedidor(fk) varchar(75),
                   nroAto(fk) varchar(25))
 
-dadosEducacionais ( codigoDadosEducacionais(pk) int, 
+dadosEducacionais ( idDadosEducacionais(pk) int, 
                     cnpjMantida(fk)  char(14), 
                     idModalidadeEnsino(fk) int,  
                     turno  char(10) (matutino/vespertino/noturno/nSeAplica),
@@ -48,7 +48,7 @@ dadosEducacionais ( codigoDadosEducacionais(pk) int,
 modalidadeEnsino ( idModalidadeEnsino(fk) int,
                    descricao varchar(35) )
 
-infraestrutura ( codigoInfraestrutura(pk),
+infraestrutura ( idInfraestrutura(pk),
                  cnpjMantida(fk)  char(14), 
                  codigoAmbiente (fk) varchar(75),
                  quantidade, 
@@ -92,7 +92,7 @@ criterio (  idcriterio (pk) int,
 RespostaAvaliacao ( idcriterio  (pfk) int,  
                     idIndicador (pfk) int,  
                     idDimensao  (pfk) int,                 
-                    versaoFormulario (pk) int,
+                    versaoFormulario (pfk) int,
                     cnpjMantida (pfk) char(14),
                     dataAvaliacao (pk) data             
                     respostaCriterio boolean            
