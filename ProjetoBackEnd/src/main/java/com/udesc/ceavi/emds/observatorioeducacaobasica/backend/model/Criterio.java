@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name="criterio")
 public class Criterio implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -15,4 +16,13 @@ public class Criterio implements Serializable {
     @Column(length = 75)
     private String descricaoCriterio;
 
+    public Criterio() {
+    }
+
+    public Criterio(Indicador indicador, Dimensao dimensao, FormularioAvaliacao formularioAvaliacao, String descricaoCriterio) {
+        this.indicador = indicador;
+        this.dimensao = dimensao;
+        this.formularioAvaliacao = formularioAvaliacao;
+        this.descricaoCriterio = descricaoCriterio;
+    }
 }

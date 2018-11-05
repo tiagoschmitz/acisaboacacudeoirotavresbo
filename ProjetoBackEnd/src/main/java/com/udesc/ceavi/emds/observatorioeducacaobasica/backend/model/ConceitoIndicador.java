@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name="conceitoIndicador")
 public class ConceitoIndicador implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -16,4 +17,16 @@ public class ConceitoIndicador implements Serializable {
     private String descricaoConceito;
     private int qtdMinima;
     private int qtdMaxima;
+
+    public ConceitoIndicador(Indicador indicador, Dimensao dimensao, FormularioAvaliacao formularioAvaliacao, String descricaoConceito, int qtdMinima, int qtdMaxima) {
+        this.indicador = indicador;
+        this.dimensao = dimensao;
+        this.formularioAvaliacao = formularioAvaliacao;
+        this.descricaoConceito = descricaoConceito;
+        this.qtdMinima = qtdMinima;
+        this.qtdMaxima = qtdMaxima;
+    }
+
+    public ConceitoIndicador() {
+    }
 }

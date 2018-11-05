@@ -48,5 +48,38 @@ public class Mantida implements Serializable {
     private boolean participouEducacenso;
     private Mantenedora mantenedora;
 
+    public Mantida() {
+    }
 
+    public Mantida(String cnpjMantida, String razaoSocialMantida, String nomeFantasiaMantida,
+                   String enderecoMantida, int nroMantida, String cepMantida, int municipioMantida,
+                   String siteMantida, String emailMantida, String telefoneFixoMantida,
+                   String telefoneCelularMantida, String responsavelDados, String telefoneResponsavel,
+                   String secretarioMantida, String telefoneSecretarioMantida, String diretorMantida,
+                   String telefoneDiretorMantida, String dependenciaAdministrativa, int corpoAdministrativo,
+                   int corpoDocente, int corpoOutros, boolean participouEducacenso, Mantenedora mantenedora) {
+        this.cnpjMantida = cnpjMantida;
+        this.razaoSocialMantida = razaoSocialMantida;
+        this.nomeFantasiaMantida = nomeFantasiaMantida;
+        this.enderecoMantida = enderecoMantida;
+        this.nroMantida = nroMantida;
+        this.cepMantida = cepMantida;
+        this.municipioMantida = municipioMantida;
+        this.siteMantida = siteMantida;
+        this.emailMantida = emailMantida;
+        this.telefoneFixoMantida = telefoneFixoMantida;
+        this.telefoneCelularMantida = telefoneCelularMantida;
+        this.responsavelDados = responsavelDados;
+        this.telefoneResponsavel = telefoneResponsavel;
+        this.secretarioMantida = secretarioMantida;
+        this.telefoneSecretarioMantida = telefoneSecretarioMantida;
+        this.diretorMantida = diretorMantida;
+        this.telefoneDiretorMantida = telefoneDiretorMantida;
+        this.dependenciaAdministrativa = dependenciaAdministrativa;
+        this.corpoAdministrativo = corpoAdministrativo;
+        this.corpoDocente = corpoDocente;
+        this.corpoOutros = corpoOutros;
+        this.participouEducacenso = participouEducacenso;
+        this.mantenedora = mantenedora;
+    }
 }
