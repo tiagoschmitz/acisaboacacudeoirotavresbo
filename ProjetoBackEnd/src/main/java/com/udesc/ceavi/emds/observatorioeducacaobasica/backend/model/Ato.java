@@ -1,14 +1,11 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name="atos")
+//@Table(name="atos")
 public class Ato implements Serializable {
 
     @Id
@@ -18,6 +15,9 @@ public class Ato implements Serializable {
     @Column(length = 14)
     private String orgaoExpedidor;
 
+    @Id
+    @OneToOne
+    @JoinColumn(name = "cnpjMantida", nullable = false)
     private Mantida mantida;
 
     @Id
@@ -30,5 +30,15 @@ public class Ato implements Serializable {
     @Column(length = 30)
     private String descricaoAto;
 
+    public Ato() {
+    }
 
+    public Ato(Date dataExpedicao, String orgaoExpedidor, Mantida mantida, String nroAto, String tipoAto, String descricaoAto) {
+        this.dataExpedicao = dataExpedicao;
+        this.orgaoExpedidor = orgaoExpedidor;
+        this.mantida = mantida;
+        this.nroAto = nroAto;
+        this.tipoAto = tipoAto;
+        this.descricaoAto = descricaoAto;
+    }
 }

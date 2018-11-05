@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "infraestrutura")
 public class Infraestrutura implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

@@ -1,11 +1,10 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+//@Table(name = "mantida")
 public class Mantida implements Serializable {
     @Id
     @Column(length = 14)
@@ -46,6 +45,9 @@ public class Mantida implements Serializable {
     private int corpoDocente;
     private int corpoOutros;
     private boolean participouEducacenso;
+
+    @ManyToOne
+    @JoinColumn(name = "cnpj_mantenedora")
     private Mantenedora mantenedora;
 
     public Mantida() {

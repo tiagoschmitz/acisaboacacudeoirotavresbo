@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="criterio")
+//@Table(name="criterio")
 public class Criterio implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

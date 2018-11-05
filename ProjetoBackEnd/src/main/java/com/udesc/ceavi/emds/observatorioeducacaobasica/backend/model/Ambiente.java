@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="ambiente")
+//@Table(name="ambiente")
 public class Ambiente implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -12,4 +12,5 @@ public class Ambiente implements Serializable {
     private long idAmbiente;
     @Column(length = 75)
     private String descricaoAmbiente;
+
 }
