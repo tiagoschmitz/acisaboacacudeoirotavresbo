@@ -2,9 +2,11 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-//@Table(name = "mantida")
+@Table(name = "mantidas")
 public class Mantida implements Serializable {
     @Id
     @Column(length = 14)
@@ -50,7 +52,19 @@ public class Mantida implements Serializable {
     @JoinColumn(name = "cnpj_mantenedora")
     private Mantenedora mantenedora;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "mantida")
+    private List<Ato> atos;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "mantida")
+    private List<DadoEducacional> dadosEducacionais;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "mantida")
+    private List<DadoEducacional> infraestrutura;
+
     public Mantida() {
+        this.atos = new ArrayList<>();
+        this.dadosEducacionais = new ArrayList<>();
+        this.infraestrutura = new ArrayList<>();
     }
 
     public Mantida(String cnpjMantida, String razaoSocialMantida, String nomeFantasiaMantida,
@@ -83,5 +97,9 @@ public class Mantida implements Serializable {
         this.corpoOutros = corpoOutros;
         this.participouEducacenso = participouEducacenso;
         this.mantenedora = mantenedora;
+        this.atos = new ArrayList<>();
+        this.dadosEducacionais = new ArrayList<>();
+        this.infraestrutura = new ArrayList<>();
+
     }
 }

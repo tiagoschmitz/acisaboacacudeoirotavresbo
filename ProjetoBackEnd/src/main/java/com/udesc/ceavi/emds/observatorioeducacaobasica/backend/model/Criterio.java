@@ -4,17 +4,22 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-//@Table(name="criterio")
+@Table(name = "criterios")
 public class Criterio implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idCriterio;
+
+    @ManyToOne
+    @JoinColumn(name = "idIndicador")
     private Indicador indicador;
+
     private Dimensao dimensao;
     private FormularioAvaliacao formularioAvaliacao;
     @Column(length = 75)
     private String descricaoCriterio;
+
 
     public Criterio() {
     }

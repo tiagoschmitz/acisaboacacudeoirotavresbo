@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-//@Table(name = "mantenedora")
+@Table(name = "mantenedoras")
 public class Mantenedora implements Serializable {
     @Id
     @Column(length = 14)

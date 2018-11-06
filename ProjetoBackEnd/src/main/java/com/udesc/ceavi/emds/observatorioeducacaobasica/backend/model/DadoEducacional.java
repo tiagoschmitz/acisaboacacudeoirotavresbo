@@ -4,14 +4,21 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-//@Table(name = "dadosEducacionais")
+@Table(name = "dadosEducacionais")
 public class DadoEducacional implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idDadoEducacional;
+
+    @ManyToOne
+    @JoinColumn(name = "cnpjMantida")
     private Mantida mantida;
+
+    @ManyToOne
+    @JoinColumn(name = "idModalidadeEnsino")
     private ModalidadeEnsino modalidadeEnsino;
+
     @Column(length = 10)
     private String turno;
     private int nroAlunos;

@@ -2,10 +2,12 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-//@Table(name="atos")
+@Table(name = "atos")
 public class Ato implements Serializable {
 
     @Id
@@ -15,9 +17,9 @@ public class Ato implements Serializable {
     @Column(length = 14)
     private String orgaoExpedidor;
 
-    @Id
-    @OneToOne
-    @JoinColumn(name = "cnpjMantida", nullable = false)
+
+    @ManyToOne
+    @JoinColumn(name = "cnpjMantida")
     private Mantida mantida;
 
     @Id
@@ -30,7 +32,12 @@ public class Ato implements Serializable {
     @Column(length = 30)
     private String descricaoAto;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ato")
+    private List<MembroComissao> membros;
+
     public Ato() {
+        this.membros = new ArrayList<>();
+
     }
 
     public Ato(Date dataExpedicao, String orgaoExpedidor, Mantida mantida, String nroAto, String tipoAto, String descricaoAto) {
@@ -40,5 +47,7 @@ public class Ato implements Serializable {
         this.nroAto = nroAto;
         this.tipoAto = tipoAto;
         this.descricaoAto = descricaoAto;
+        this.membros = new ArrayList<>();
     }
+
 }
