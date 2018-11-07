@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "formulariosAvaliacao")
 public class FormularioAvaliacao implements Serializable {
-    private static final long serialVersionUID = 1L;
+    //    private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long idFormulario;
 
     @ManyToMany(mappedBy = "formularios")
@@ -20,7 +19,7 @@ public class FormularioAvaliacao implements Serializable {
     private List<Dimensao> dimensoes;
 
     public FormularioAvaliacao() {
-        membros = new ArrayList<>();
+        membros = new ArrayList<MembroComissao>();
     }
 
     public FormularioAvaliacao(List<MembroComissao> membros) {

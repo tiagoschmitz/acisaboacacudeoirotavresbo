@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "atos")
 public class Ato implements Serializable {
 
     @Id

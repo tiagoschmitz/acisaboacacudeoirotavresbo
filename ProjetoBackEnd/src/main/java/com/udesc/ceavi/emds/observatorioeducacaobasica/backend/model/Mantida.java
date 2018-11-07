@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "mantidas")
 public class Mantida implements Serializable {
     @Id
     @Column(length = 14)

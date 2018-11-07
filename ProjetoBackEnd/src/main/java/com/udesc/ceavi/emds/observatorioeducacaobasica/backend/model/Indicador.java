@@ -2,10 +2,10 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "indicadores")
 public class Indicador implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -16,17 +16,27 @@ public class Indicador implements Serializable {
     @ManyToOne
     @JoinColumns({
             @JoinColumn(name = "dimensao_idDimensao", referencedColumnName = "idDimensao"),
-            @JoinColumn(name = "dimensao_idFormulario", referencedColumnName = "formularioAvaliacao")
+//            @JoinColumn(name = "dimensao_idFormulario", referencedColumnName = "formularioAvaliacao")
     })
     private Dimensao dimensao;
 
-    private FormularioAvaliacao formularioAvaliacao;
+    //    private FormularioAvaliacao formularioAvaliacao;
     @Column(length = 75)
     private String descricaoIndicador;
     @Column(length = 700)
     private String glossario;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "criterio")
-    private List<Criterio> criterios;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "criterio")
+//    private List<Criterio> criterios;
 
+    public Indicador() {
+//        this.criterios = new ArrayList<Criterio>();
+    }
+
+    public Indicador(Dimensao dimensao, String descricaoIndicador, String glossario) {
+        this.dimensao = dimensao;
+        this.descricaoIndicador = descricaoIndicador;
+        this.glossario = glossario;
+//        this.criterios = new ArrayList<Criterio>();
+    }
 }

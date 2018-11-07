@@ -1,18 +1,20 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.backend.model;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "membrosComissoes")
 public class MembroComissao implements Serializable {
     @Id
     @Column(length = 11)
     private String cpf;
 
-    @Id
+    //    @Id
     @ManyToOne
     @JoinColumns({
             @JoinColumn(name = "ato_orgao_expedidor", referencedColumnName = "orgaoExpedidor"),
@@ -24,10 +26,10 @@ public class MembroComissao implements Serializable {
     @Column(length = 75)
     private String nome;
 
-    @ManyToMany
-    @JoinTable(name = "membros_formularios", joinColumns =
-            {@JoinColumn(name = "cpf")}, inverseJoinColumns =
-            {@JoinColumn(name = "idFormulario")})
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "membro_formulario",
+            joinColumns = {@JoinColumn(name = "cpf")},
+            inverseJoinColumns = {@JoinColumn(name = "idFormulario")})
     private List<FormularioAvaliacao> formularios;
 
 
@@ -35,8 +37,11 @@ public class MembroComissao implements Serializable {
         this.cpf = cpf;
         this.nome = nome;
         this.ato = ato;
+        this.formularios = new ArrayList<FormularioAvaliacao>();
     }
 
     public MembroComissao() {
+        this.formularios = new ArrayList<FormularioAvaliacao>();
+
     }
 }

@@ -8,7 +8,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "relatosAvaliacaoDimensoes")
 public class RelatoAvaliacaoDimensao implements Serializable {
     @Id
     private Date dataAvaliacao;
