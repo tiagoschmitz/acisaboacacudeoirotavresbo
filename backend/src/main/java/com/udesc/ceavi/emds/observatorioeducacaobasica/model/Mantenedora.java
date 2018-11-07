@@ -1,23 +1,28 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import org.hibernate.validator.constraints.br.CNPJ;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
+
+@Document
 public class Mantenedora implements Serializable {
+    @Id
+    @NotEmpty(message = "CNPJ não pode ser vazio")
+    @CNPJ(message = "CNPJ invalido")
     private String cnpjMantenedora;
+
+    @NotEmpty(message = "Razão não pode ser vazio")
     private String razaoSocialMantenedora;
 
-    private List<Mantida> mantidas;
+    public Mantenedora() {
+    }
 
     public Mantenedora(String cnpjMantenedora, String razaoSocialMantenedora) {
         this.cnpjMantenedora = cnpjMantenedora;
         this.razaoSocialMantenedora = razaoSocialMantenedora;
-        this.mantidas = new ArrayList<Mantida>();
-    }
-
-    public Mantenedora() {
-        this.mantidas = new ArrayList<Mantida>();
     }
 
     public String getCnpjMantenedora() {
@@ -34,17 +39,5 @@ public class Mantenedora implements Serializable {
 
     public void setRazaoSocialMantenedora(String razaoSocialMantenedora) {
         this.razaoSocialMantenedora = razaoSocialMantenedora;
-    }
-
-    public void addMantidas(Mantida mantida) {
-        mantidas.add(mantida);
-    }
-
-    @Override
-    public String toString() {
-        return "Mantenedora{" +
-                "cnpjMantenedora='" + cnpjMantenedora + '\'' +
-                ", razaoSocialMantenedora='" + razaoSocialMantenedora + '\'' +
-                '}';
     }
 }
