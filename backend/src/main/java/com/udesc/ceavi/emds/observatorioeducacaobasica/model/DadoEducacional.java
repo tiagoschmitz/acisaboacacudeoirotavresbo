@@ -3,9 +3,6 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.model;
 import java.io.Serializable;
 
 public class DadoEducacional implements Serializable {
-    private long idDadoEducacional;
-
-    private Mantida mantida;
 
     private ModalidadeEnsino modalidadeEnsino;
 
@@ -13,8 +10,7 @@ public class DadoEducacional implements Serializable {
     private int nroAlunos;
     private int nroTurmas;
 
-    public DadoEducacional(Mantida mantida, ModalidadeEnsino modalidadeEnsino, String turno, int nroAlunos, int nroTurmas) {
-        this.mantida = mantida;
+    public DadoEducacional(ModalidadeEnsino modalidadeEnsino, String turno, int nroAlunos, int nroTurmas) {
         this.modalidadeEnsino = modalidadeEnsino;
         this.turno = turno;
         this.nroAlunos = nroAlunos;

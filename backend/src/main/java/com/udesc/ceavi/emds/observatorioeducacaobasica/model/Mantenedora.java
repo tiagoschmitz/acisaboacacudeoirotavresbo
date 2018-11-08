@@ -9,20 +9,23 @@ import java.io.Serializable;
 
 @Document
 public class Mantenedora implements Serializable {
-    @Id
+//    @Id
     @NotEmpty(message = "CNPJ não pode ser vazio")
-    @CNPJ(message = "CNPJ invalido")
+//    @CNPJ(message = "CNPJ invalido")
     private String cnpjMantenedora;
 
     @NotEmpty(message = "Razão não pode ser vazio")
     private String razaoSocialMantenedora;
 
+    private Test test;
+
     public Mantenedora() {
     }
 
-    public Mantenedora(String cnpjMantenedora, String razaoSocialMantenedora) {
+    public Mantenedora(@NotEmpty(message = "CNPJ não pode ser vazio") String cnpjMantenedora, @NotEmpty(message = "Razão não pode ser vazio") String razaoSocialMantenedora, Test test) {
         this.cnpjMantenedora = cnpjMantenedora;
         this.razaoSocialMantenedora = razaoSocialMantenedora;
+        this.test = test;
     }
 
     public String getCnpjMantenedora() {
@@ -39,5 +42,13 @@ public class Mantenedora implements Serializable {
 
     public void setRazaoSocialMantenedora(String razaoSocialMantenedora) {
         this.razaoSocialMantenedora = razaoSocialMantenedora;
+    }
+
+    public Test getTest() {
+        return test;
+    }
+
+    public void setTest(Test test) {
+        this.test = test;
     }
 }
