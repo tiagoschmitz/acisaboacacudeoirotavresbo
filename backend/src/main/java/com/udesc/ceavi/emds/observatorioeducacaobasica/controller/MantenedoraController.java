@@ -1,4 +1,4 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.api;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.controller;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.Mantenedora;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.responses.Response;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
-@RequestMapping(path = "/api/mantenedora")
+@RequestMapping(path = "/controller/mantenedora")
 public class MantenedoraController {
     @Autowired
     private MantenedoraService mantenedoraService;

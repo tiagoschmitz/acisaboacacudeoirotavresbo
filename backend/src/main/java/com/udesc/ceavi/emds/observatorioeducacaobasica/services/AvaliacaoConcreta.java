@@ -3,9 +3,11 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.services;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Avaliacao;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.repository.AvaliacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AvaliacaoConcreta implements AvaliacaoService {
 
     @Autowired
