@@ -1,0 +1,47 @@
+{
+	"corpoAdministrativo":50,
+	"corpoDocente":20,
+	"corpoOutros":20,
+	"participouEducacenso":"false",
+	"Comissao":{
+		"membros":[{
+			"membro":{
+				"nome":"ABC",
+			"	cpf":"00000000012"
+			}
+		}],
+		"Ato":{
+			"dataExpedicao":"01/01/2018",
+			"orgaoExpedidor":"ABC",
+			"nroAto":"XYZ",
+			"tipoAto":"XYZ",
+			"descricaoAto":"CDE"
+		}
+	},
+	"DadosEducacionais":{
+		"descricaoModalidadeEnsino":"OPQ",
+		"turno":"matutino",
+		"nroAlunos":2,
+		"nroTurmas":3
+	},
+	"Infraestrutura":{
+		"descricaoAmbiente":"OPO",
+		"quantidade":4,
+		"descricao":"LO"
+	},
+	"Dimensao":{
+		"descricaoDimensao":"ONE",
+		"relatoOpcional":"T",
+		"indicadores":[{
+			"Indicador":{
+				"descricaoIndicador":"x",
+				"conceito":1,
+				"Criterio":{
+					"descricaoCriterio":"OP",
+					"atende":"false"
+				}
+				
+			}
+		}]
+	}
+}
