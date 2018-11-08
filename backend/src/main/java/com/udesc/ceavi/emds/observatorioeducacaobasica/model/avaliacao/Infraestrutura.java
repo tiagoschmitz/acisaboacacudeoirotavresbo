@@ -40,4 +40,13 @@ public class Infraestrutura {
     public void setDescricaoOpcional(String descricaoOpcional) {
         this.descricaoOpcional = descricaoOpcional;
     }
+
+    @Override
+    public String toString() {
+        return "Infraestrutura{" +
+                "descricaoAmbiente='" + descricaoAmbiente + '\'' +
+                ", quantidade=" + quantidade +
+                ", descricaoOpcional='" + descricaoOpcional + '\'' +
+                '}';
+    }
 }

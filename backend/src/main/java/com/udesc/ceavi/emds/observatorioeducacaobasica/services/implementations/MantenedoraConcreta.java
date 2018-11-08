@@ -1,15 +1,15 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.services;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.services.implementations;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.Mantenedora;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.repository.MantenedoraRepository;
+import com.udesc.ceavi.emds.observatorioeducacaobasica.services.interfaces.MantenedoraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class MantenedoraImpl implements MantenedoraService {
+public class MantenedoraConcreta implements MantenedoraService {
 
     @Autowired
     private MantenedoraRepository mantenedoraRepository;

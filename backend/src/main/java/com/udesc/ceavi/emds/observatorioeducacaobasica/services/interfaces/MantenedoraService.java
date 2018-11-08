@@ -1,4 +1,4 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.services;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.services.interfaces;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.Mantenedora;
 

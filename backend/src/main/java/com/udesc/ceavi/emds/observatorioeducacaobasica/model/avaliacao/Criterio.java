@@ -30,4 +30,12 @@ public class Criterio {
     public void setAtende(boolean atende) {
         this.atende = atende;
     }
+
+    @Override
+    public String toString() {
+        return "Criterio{" +
+                "descricaoCriterio='" + descricaoCriterio + '\'' +
+                ", atende=" + atende +
+                '}';
+    }
 }

@@ -29,4 +29,12 @@ public class Response<T> {
     public void setErros(List<String> erros) {
         this.erros = erros;
     }
+
+    @Override
+    public String toString() {
+        return "Response{" +
+                "data=" + data +
+                ", erros=" + erros +
+                '}';
+    }
 }

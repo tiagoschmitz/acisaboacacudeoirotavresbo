@@ -2,7 +2,7 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.controller;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.Mantenedora;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.responses.Response;
-import com.udesc.ceavi.emds.observatorioeducacaobasica.services.MantenedoraService;
+import com.udesc.ceavi.emds.observatorioeducacaobasica.services.interfaces.MantenedoraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

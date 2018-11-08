@@ -65,4 +65,15 @@ public class Ato {
     public void setDescricaoAto(String descricaoAto) {
         this.descricaoAto = descricaoAto;
     }
+
+    @Override
+    public String toString() {
+        return "Ato{" +
+                "dataExpedicao=" + dataExpedicao +
+                ", orgaoExpedidor='" + orgaoExpedidor + '\'' +
+                ", nroAto='" + nroAto + '\'' +
+                ", tipoAto='" + tipoAto + '\'' +
+                ", descricaoAto='" + descricaoAto + '\'' +
+                '}';
+    }
 }

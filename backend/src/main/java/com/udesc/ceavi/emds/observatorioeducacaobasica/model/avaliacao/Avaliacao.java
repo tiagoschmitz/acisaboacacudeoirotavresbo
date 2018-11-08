@@ -1,10 +1,13 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.bson.types.ObjectId;
 
 @Document
 public class Avaliacao {
-
+    @Id
+    public ObjectId _id;
     private int corpoAdministrativo;
     private int corpoDocente;
     private int corpoOutros;
@@ -94,5 +97,28 @@ public class Avaliacao {
 
     public void setDimensao(Dimensao dimensao) {
         this.dimensao = dimensao;
+    }
+
+
+    public ObjectId get_id() {
+        return _id;
+    }
+
+    public void set_id(ObjectId _id) {
+        this._id = _id;
+    }
+
+    @Override
+    public String toString() {
+        return "Avaliacao{" +
+                "corpoAdministrativo=" + corpoAdministrativo +
+                ", corpoDocente=" + corpoDocente +
+                ", corpoOutros=" + corpoOutros +
+                ", participouEducacenso=" + participouEducacenso +
+                ", comissao=" + comissao +
+                ", dadoEducacional=" + dadoEducacional +
+                ", infraestrutura=" + infraestrutura +
+                ", dimensao=" + dimensao +
+                '}';
     }
 }

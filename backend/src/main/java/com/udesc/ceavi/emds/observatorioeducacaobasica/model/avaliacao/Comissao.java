@@ -30,4 +30,12 @@ public class Comissao {
     public void setAto(Ato ato) {
         this.ato = ato;
     }
+
+    @Override
+    public String toString() {
+        return "Comissao{" +
+                "membros=" + membros +
+                ", ato=" + ato +
+                '}';
+    }
 }

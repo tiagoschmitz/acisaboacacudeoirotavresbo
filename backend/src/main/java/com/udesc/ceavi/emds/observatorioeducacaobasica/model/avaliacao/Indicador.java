@@ -43,4 +43,13 @@ public class Indicador {
     public void setCriterios(List<Criterio> criterios) {
         this.criterios = criterios;
     }
+
+    @Override
+    public String toString() {
+        return "Indicador{" +
+                "descricaoIndicador='" + descricaoIndicador + '\'' +
+                ", conceito=" + conceito +
+                ", criterios=" + criterios +
+                '}';
+    }
 }

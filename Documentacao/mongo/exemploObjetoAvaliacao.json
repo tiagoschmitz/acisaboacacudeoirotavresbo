@@ -1,47 +1,48 @@
 {
-	"corpoAdministrativo":50,
+	"corpoAdministrativo":51,
 	"corpoDocente":20,
 	"corpoOutros":20,
 	"participouEducacenso":"false",
-	"Comissao":{
-		"membros":[{
-			"membro":{
+	"comissao":{
+		"membros":[
+			{
 				"nome":"ABC",
-			"	cpf":"00000000012"
+				"cpf":"00000000012"
 			}
-		}],
-		"Ato":{
-			"dataExpedicao":"01/01/2018",
+		],
+		"ato":{
+			"dataExpedicao":"2018-01-01",
 			"orgaoExpedidor":"ABC",
 			"nroAto":"XYZ",
 			"tipoAto":"XYZ",
 			"descricaoAto":"CDE"
 		}
 	},
-	"DadosEducacionais":{
-		"descricaoModalidadeEnsino":"OPQ",
+	"dadoEducacional":{
+		"descricaoModalidade":"OPQ",
 		"turno":"matutino",
 		"nroAlunos":2,
 		"nroTurmas":3
 	},
-	"Infraestrutura":{
+	"infraestrutura":{
 		"descricaoAmbiente":"OPO",
 		"quantidade":4,
-		"descricao":"LO"
+		"descricaoOpcional":"LO"
 	},
-	"Dimensao":{
+	"dimensao":{
 		"descricaoDimensao":"ONE",
 		"relatoOpcional":"T",
-		"indicadores":[{
-			"Indicador":{
+		"indicadores":[
+			{
 				"descricaoIndicador":"x",
 				"conceito":1,
-				"Criterio":{
-					"descricaoCriterio":"OP",
-					"atende":"false"
-				}
-				
+				"criterios":[
+					{
+						"descricaoCriterio":"POU",
+						"atende":"false"
+					}
+				]
 			}
-		}]
+		]
 	}
 }

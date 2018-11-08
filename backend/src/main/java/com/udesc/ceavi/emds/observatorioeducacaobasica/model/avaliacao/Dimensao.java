@@ -43,5 +43,14 @@ public class Dimensao {
     public void setIndicadores(List<Indicador> indicadores) {
         this.indicadores = indicadores;
     }
+
+    @Override
+    public String toString() {
+        return "Dimensao{" +
+                "descricaoDimensao='" + descricaoDimensao + '\'' +
+                ", relatoOpcional='" + relatoOpcional + '\'' +
+                ", indicadores=" + indicadores +
+                '}';
+    }
 }
 

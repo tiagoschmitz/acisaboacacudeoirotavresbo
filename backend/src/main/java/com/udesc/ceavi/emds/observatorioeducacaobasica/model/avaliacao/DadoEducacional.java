@@ -49,4 +49,14 @@ public class DadoEducacional {
     public void setNroTurmas(int nroTurmas) {
         this.nroTurmas = nroTurmas;
     }
+
+    @Override
+    public String toString() {
+        return "DadoEducacional{" +
+                "descricaoModalidade='" + descricaoModalidade + '\'' +
+                ", turno='" + turno + '\'' +
+                ", nroAlunos=" + nroAlunos +
+                ", nroTurmas=" + nroTurmas +
+                '}';
+    }
 }

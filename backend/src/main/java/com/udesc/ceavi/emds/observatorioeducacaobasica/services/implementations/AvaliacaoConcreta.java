@@ -1,7 +1,9 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.services;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.services.implementations;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Avaliacao;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.repository.AvaliacaoRepository;
+import com.udesc.ceavi.emds.observatorioeducacaobasica.services.interfaces.AvaliacaoService;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,23 +21,22 @@ public class AvaliacaoConcreta implements AvaliacaoService {
     }
 
     @Override
-    public Avaliacao listarPorId(String id) {
-//        return this.avaliacaoRepository.findById(id);
-        return null;
+    public Avaliacao listarPorId(ObjectId id) {
+        return this.avaliacaoRepository.findBy_id(id);
     }
 
     @Override
-    public Avaliacao cadastrar(Avaliacao mantenedora) {
-        return this.avaliacaoRepository.save(mantenedora);
+    public Avaliacao cadastrar(Avaliacao avaliacao) {
+        return this.avaliacaoRepository.save(avaliacao);
     }
 
     @Override
-    public Avaliacao atualizar(Avaliacao mantenedora) {
-        return this.avaliacaoRepository.save(mantenedora);
+    public Avaliacao atualizar(Avaliacao avaliacao) {
+        return this.avaliacaoRepository.save(avaliacao);
     }
 
     @Override
-    public void remover(String id) {
-        this.avaliacaoRepository.deleteById(id);
+    public void remover(Avaliacao avaliacao) {
+        this.avaliacaoRepository.delete(avaliacao);
     }
 }

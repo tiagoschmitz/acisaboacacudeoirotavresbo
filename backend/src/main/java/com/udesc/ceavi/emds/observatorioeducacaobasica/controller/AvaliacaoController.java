@@ -2,7 +2,8 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.controller;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Avaliacao;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.responses.Response;
-import com.udesc.ceavi.emds.observatorioeducacaobasica.services.AvaliacaoService;
+import com.udesc.ceavi.emds.observatorioeducacaobasica.services.interfaces.AvaliacaoService;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +22,17 @@ public class AvaliacaoController {
     @Autowired
     private AvaliacaoService avaliacaoService;
 
+    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<Response<List<Avaliacao>>> listarTodas() {
+        return ResponseEntity.ok(new Response<List<Avaliacao>>(this.avaliacaoService.listarTodos()));
+    }
 
-    @RequestMapping(value= "/cadastro", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<Response<Avaliacao>> avaliacaoPorId(@PathVariable(name = "id") ObjectId id) {
+        return ResponseEntity.ok(new Response<Avaliacao>(this.avaliacaoService.listarPorId(id)));
+    }
+
+    @RequestMapping(value = "/cadastro", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Avaliacao>> cadastrar(@Valid @RequestBody Avaliacao avaliacao, BindingResult result) {
         if (result.hasErrors()) {
             List<String> erros = new ArrayList<String>();
@@ -30,5 +40,24 @@ public class AvaliacaoController {
             return ResponseEntity.badRequest().body(new Response<Avaliacao>(erros));
         }
         return ResponseEntity.ok(new Response<Avaliacao>(this.avaliacaoService.cadastrar(avaliacao)));
+    }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<Response<Avaliacao>> atualizar(@PathVariable(name = "id") ObjectId id, @RequestBody Avaliacao avaliacao, BindingResult result) {
+        if (result.hasErrors()) {
+            List<String> erros = new ArrayList<String>();
+            result.getAllErrors().forEach(erro -> erros.add(erro.getDefaultMessage()));
+            return ResponseEntity.badRequest().body(new Response<Avaliacao>(erros));
+        }
+        avaliacao.set_id(id);
+        return ResponseEntity.ok(new Response<Avaliacao>(this.avaliacaoService.atualizar(avaliacao)));
+    }
+
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
+        Avaliacao a = this.avaliacaoService.listarPorId(id);
+        this.avaliacaoService.remover(a);
+        return ResponseEntity.ok(new Response<Integer>(1));
     }
 }
