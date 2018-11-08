@@ -1,5 +1,7 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model;
 
+import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Dimensao;
+
 import java.io.Serializable;
 import java.util.Date;
 

@@ -1,5 +1,7 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model;
 
+import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Ato;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,8 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model;
 
+import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Dimensao;
+import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Indicador;
+
 import java.io.Serializable;
 
 public class ConceitoIndicador implements Serializable {

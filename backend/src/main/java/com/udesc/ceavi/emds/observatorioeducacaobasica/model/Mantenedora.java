@@ -17,15 +17,12 @@ public class Mantenedora implements Serializable {
     @NotEmpty(message = "Razão não pode ser vazio")
     private String razaoSocialMantenedora;
 
-    private Test test;
-
     public Mantenedora() {
     }
 
-    public Mantenedora(@NotEmpty(message = "CNPJ não pode ser vazio") String cnpjMantenedora, @NotEmpty(message = "Razão não pode ser vazio") String razaoSocialMantenedora, Test test) {
+    public Mantenedora(@NotEmpty(message = "CNPJ não pode ser vazio") String cnpjMantenedora, @NotEmpty(message = "Razão não pode ser vazio") String razaoSocialMantenedora) {
         this.cnpjMantenedora = cnpjMantenedora;
         this.razaoSocialMantenedora = razaoSocialMantenedora;
-        this.test = test;
     }
 
     public String getCnpjMantenedora() {
@@ -44,11 +41,4 @@ public class Mantenedora implements Serializable {
         this.razaoSocialMantenedora = razaoSocialMantenedora;
     }
 
-    public Test getTest() {
-        return test;
-    }
-
-    public void setTest(Test test) {
-        this.test = test;
-    }
 }
