@@ -1,5 +1,6 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao;
 
+import com.udesc.ceavi.emds.observatorioeducacaobasica.model.instituicao.Instituicao;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.bson.types.ObjectId;
@@ -8,6 +9,7 @@ import org.bson.types.ObjectId;
 public class Avaliacao {
     @Id
     public ObjectId _id;
+
     private int corpoAdministrativo;
     private int corpoDocente;
     private int corpoOutros;
@@ -20,6 +22,8 @@ public class Avaliacao {
     private Infraestrutura infraestrutura;
 
     private Dimensao dimensao;
+
+    private Instituicao instituicao;
 
     public Avaliacao() {
     }

@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8080")
+//@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping(path = "/avaliacao")
 public class AvaliacaoController {
@@ -42,8 +42,10 @@ public class AvaliacaoController {
         return ResponseEntity.ok(new Response<Avaliacao>(this.avaliacaoService.cadastrar(avaliacao)));
     }
 
+
     @RequestMapping(path = "/{id}", method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Avaliacao>> atualizar(@PathVariable(name = "id") ObjectId id, @RequestBody Avaliacao avaliacao, BindingResult result) {
+        System.out.println("To aqui");
         if (result.hasErrors()) {
             List<String> erros = new ArrayList<String>();
             result.getAllErrors().forEach(erro -> erros.add(erro.getDefaultMessage()));
@@ -56,7 +58,9 @@ public class AvaliacaoController {
 
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
+        System.out.println("To aqui");
         Avaliacao a = this.avaliacaoService.listarPorId(id);
+        System.out.println("Avaliacao encontrada " + a.toString());
         this.avaliacaoService.remover(a);
         return ResponseEntity.ok(new Response<Integer>(1));
     }

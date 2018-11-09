@@ -2,27 +2,23 @@ package com.udesc.ceavi.emds.observatorioeducacaobasica.model.instituicao;
 
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.Ato;
 import com.udesc.ceavi.emds.observatorioeducacaobasica.model.avaliacao.DadoEducacional;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 public class Instituicao {
-
     @Id
+    private ObjectId objectId;
+
     @NotEmpty(message = "CNPJ não pode ser vazio")
-//    @CNPJ(message = "CNPJ invalido")
     private String cnpjMantenedora;
 
     @NotEmpty(message = "Razão não pode ser vazio")
     private String razaoSocialMantenedora;
-
-    private String cnpj;
-
     private String razaoSocial;
-
     private String nomeFantasia;
-
     private String endereco;
     private int nro;
     private String cep;
@@ -38,11 +34,7 @@ public class Instituicao {
     private String diretor;
     private String telefoneDiretor;
     private String dependenciaAdministrativa;
-
-
     private List<Ato> atos;
-
     private List<DadoEducacional> dadosEducacionais;
-
     private List<DadoEducacional> infraestrutura;
 }
