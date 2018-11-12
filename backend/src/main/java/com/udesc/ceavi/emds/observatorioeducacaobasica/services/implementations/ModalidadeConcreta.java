@@ -5,9 +5,11 @@ import com.udesc.ceavi.emds.observatorioeducacaobasica.repository.ModalidadeRepo
 import com.udesc.ceavi.emds.observatorioeducacaobasica.services.interfaces.ModalidadeService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ModalidadeConcreta implements ModalidadeService {
 
     @Autowired
