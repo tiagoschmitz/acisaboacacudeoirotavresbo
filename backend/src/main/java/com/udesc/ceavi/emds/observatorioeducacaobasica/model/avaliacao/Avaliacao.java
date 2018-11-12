@@ -9,20 +9,14 @@ import org.bson.types.ObjectId;
 public class Avaliacao {
     @Id
     public ObjectId _id;
-
     private int corpoAdministrativo;
     private int corpoDocente;
     private int corpoOutros;
     private boolean participouEducacenso;
-
     private Comissao comissao;
-
     private DadoEducacional dadoEducacional;
-
     private Infraestrutura infraestrutura;
-
     private Dimensao dimensao;
-
     private Instituicao instituicao;
 
     public Avaliacao() {
