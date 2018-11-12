@@ -44,5 +44,39 @@
 				]
 			}
 		]
+	},
+	"instituicao":{
+		"objectId":"1111",
+		"cnpjMantenedora":"000",
+		"razaoSocialMantenedora":"505050",
+		"cnpj":"999",
+		"razaoSocial":"47",
+		"nomeFantasia":"48",
+		"endereco":"8",
+		"nro":13,
+		"cep":"891400",
+		"municipio":8778,
+		"site":"6",
+		"email":"fd",
+		"telefoneFixo":"46",
+		"telefoneCelular":"545",
+		"responsavelDados":"2321",
+		"telefoneResponsavel":"5",
+		"secretario":"34",
+		"telefoneSecretario":"87",
+		"diretor":"898",
+		"telefoneDiretor":"949",
+		"dependenciaAdministrativa":"32",
+		"atos":[
+			{
+				"dataExpedicao":"2018-01-01",
+				"orgaoExpedidor":"SSP",
+				"nroAto":"1",
+				"tipoAto":"A",
+				"descricaoAto":"B"
+			}
+		]
+		
+		
 	}
 }
