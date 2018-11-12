@@ -22,12 +22,12 @@ public class AvaliacaoController {
     @Autowired
     private AvaliacaoService avaliacaoService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Avaliacao>>> listarTodas() {
         return ResponseEntity.ok(new Response<List<Avaliacao>>(this.avaliacaoService.listarTodos()));
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Avaliacao>> avaliacaoPorId(@PathVariable(name = "id") ObjectId id) {
         return ResponseEntity.ok(new Response<Avaliacao>(this.avaliacaoService.listarPorId(id)));
     }
