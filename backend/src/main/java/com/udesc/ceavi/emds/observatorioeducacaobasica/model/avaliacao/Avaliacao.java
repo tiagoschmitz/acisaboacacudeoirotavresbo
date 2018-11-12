@@ -28,7 +28,7 @@ public class Avaliacao {
     public Avaliacao() {
     }
 
-    public Avaliacao(int corpoAdministrativo, int corpoDocente, int corpoOutros, boolean participouEducacenso, Comissao comissao, DadoEducacional dadoEducacional, Infraestrutura infraestrutura, Dimensao dimensao) {
+    public Avaliacao(int corpoAdministrativo, int corpoDocente, int corpoOutros, boolean participouEducacenso, Comissao comissao, DadoEducacional dadoEducacional, Infraestrutura infraestrutura, Dimensao dimensao, Instituicao instituicao) {
         this.corpoAdministrativo = corpoAdministrativo;
         this.corpoDocente = corpoDocente;
         this.corpoOutros = corpoOutros;
@@ -37,6 +37,7 @@ public class Avaliacao {
         this.dadoEducacional = dadoEducacional;
         this.infraestrutura = infraestrutura;
         this.dimensao = dimensao;
+        this.instituicao = instituicao;
     }
 
     public int getCorpoAdministrativo() {
@@ -103,6 +104,13 @@ public class Avaliacao {
         this.dimensao = dimensao;
     }
 
+    public Instituicao getInstituicao() {
+        return instituicao;
+    }
+
+    public void setInstituicao(Instituicao instituicao) {
+        this.instituicao = instituicao;
+    }
 
     public ObjectId get_id() {
         return _id;
@@ -115,7 +123,8 @@ public class Avaliacao {
     @Override
     public String toString() {
         return "Avaliacao{" +
-                "corpoAdministrativo=" + corpoAdministrativo +
+                "_id=" + _id +
+                ", corpoAdministrativo=" + corpoAdministrativo +
                 ", corpoDocente=" + corpoDocente +
                 ", corpoOutros=" + corpoOutros +
                 ", participouEducacenso=" + participouEducacenso +
@@ -123,6 +132,7 @@ public class Avaliacao {
                 ", dadoEducacional=" + dadoEducacional +
                 ", infraestrutura=" + infraestrutura +
                 ", dimensao=" + dimensao +
+                ", instituicao=" + instituicao +
                 '}';
     }
 }

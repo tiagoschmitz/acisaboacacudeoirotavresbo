@@ -17,6 +17,7 @@ public class Instituicao {
 
     @NotEmpty(message = "Razão não pode ser vazio")
     private String razaoSocialMantenedora;
+    private String cnpj;
     private String razaoSocial;
     private String nomeFantasia;
     private String endereco;
@@ -35,6 +36,4 @@ public class Instituicao {
     private String telefoneDiretor;
     private String dependenciaAdministrativa;
     private List<Ato> atos;
-    private List<DadoEducacional> dadosEducacionais;
-    private List<DadoEducacional> infraestrutura;
 }
