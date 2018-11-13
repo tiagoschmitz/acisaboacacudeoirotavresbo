@@ -1,4 +1,4 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.model.dimensao;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.model.formulario;
 
 public class Conceito {
 

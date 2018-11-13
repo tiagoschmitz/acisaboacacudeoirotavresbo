@@ -1,4 +1,4 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.model.dimensao;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.model.formulario;
 
 import org.bson.types.ObjectId;
 
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Dimensao {
 
-    private ObjectId _id;
+
     private String descricao;
     private String dica;
     private List<Indicador> indicadores;
@@ -18,14 +18,6 @@ public class Dimensao {
         this.descricao = descricao;
         this.dica = dica;
         this.indicadores = indicadores;
-    }
-
-    public ObjectId get_id() {
-        return _id;
-    }
-
-    public void set_id(ObjectId _id) {
-        this._id = _id;
     }
 
     public String getDescricao() {
@@ -55,7 +47,6 @@ public class Dimensao {
     @Override
     public String toString() {
         return "Dimensao{" +
-                "_id=" + _id +
                 ", descricao='" + descricao + '\'' +
                 ", dica='" + dica + '\'' +
                 ", indicadores=" + indicadores +
