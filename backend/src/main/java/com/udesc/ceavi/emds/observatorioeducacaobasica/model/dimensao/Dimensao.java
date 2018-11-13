@@ -1,10 +1,11 @@
-package com.udesc.ceavi.emds.observatorioeducacaobasica.model.login;
+package com.udesc.ceavi.emds.observatorioeducacaobasica.model.dimensao;
 
 import org.bson.types.ObjectId;
 
-public class Login {
+public class Dimensao {
 
     private ObjectId _id;
+
 
     public ObjectId get_id() {
         return _id;
