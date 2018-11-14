@@ -22,12 +22,12 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Login>>> listarTodas() {
         return ResponseEntity.ok(new Response<List<Login>>(this.loginService.listarTodos()));
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Login>> loginPorId(@PathVariable(name = "id") ObjectId id) {
         return ResponseEntity.ok(new Response<Login>(this.loginService.listarPorId(id)));
     }
@@ -56,7 +56,7 @@ public class LoginController {
     }
 
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
         System.out.println("To aqui");
         Login a = this.loginService.listarPorId(id);

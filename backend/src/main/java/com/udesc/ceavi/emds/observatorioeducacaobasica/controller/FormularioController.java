@@ -22,12 +22,12 @@ public class FormularioController {
     @Autowired
     private FormularioService formularioService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Formulario>>> listarTodas() {
         return ResponseEntity.ok(new Response<List<Formulario>>(this.formularioService.listarTodos()));
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Formulario>> formularioPorId(@PathVariable(name = "id") ObjectId id) {
         return ResponseEntity.ok(new Response<Formulario>(this.formularioService.listarPorId(id)));
     }
@@ -55,7 +55,7 @@ public class FormularioController {
     }
 
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
         Formulario a = this.formularioService.listarPorId(id);
         System.out.println("Formulario encontrado " + a.toString());

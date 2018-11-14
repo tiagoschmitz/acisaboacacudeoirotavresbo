@@ -22,12 +22,12 @@ public class AmbienteController {
     @Autowired
     private AmbienteService ambienteService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Ambiente>>> listarTodas() {
         return ResponseEntity.ok(new Response<List<Ambiente>>(this.ambienteService.listarTodos()));
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Ambiente>> ambientePorId(@PathVariable(name = "id") ObjectId id) {
         return ResponseEntity.ok(new Response<Ambiente>(this.ambienteService.listarPorId(id)));
     }
@@ -55,7 +55,7 @@ public class AmbienteController {
     }
 
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
         Ambiente a = this.ambienteService.listarPorId(id);
         System.out.println("Ambiente encontrado " + a.toString());

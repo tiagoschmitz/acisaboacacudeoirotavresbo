@@ -56,7 +56,7 @@ public class AvaliacaoController {
     }
 
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
         System.out.println("To aqui");
         Avaliacao a = this.avaliacaoService.listarPorId(id);
