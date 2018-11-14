@@ -7,6 +7,8 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +25,8 @@ public class AvaliacaoController {
     private AvaliacaoService avaliacaoService;
 
     @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<Response<List<Avaliacao>>> listarTodas() {
+    public ResponseEntity<Response<List<Avaliacao>>> listarTodas(@AuthenticationPrincipal UserDetails userDetails) {
+        System.out.println(userDetails);
         return ResponseEntity.ok(new Response<List<Avaliacao>>(this.avaliacaoService.listarTodos()));
     }
 

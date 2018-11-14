@@ -5,5 +5,5 @@ import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface LoginRepository extends MongoRepository<Login, String> {
-    Login findBy_id(ObjectId _id);
+    Login findByCnpj(String cnpj);
 }
