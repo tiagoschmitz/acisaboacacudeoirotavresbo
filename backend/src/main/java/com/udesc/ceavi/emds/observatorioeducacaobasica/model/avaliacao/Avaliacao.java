@@ -9,6 +9,7 @@ import org.bson.types.ObjectId;
 public class Avaliacao {
     @Id
     public ObjectId _id;
+    private int versao;
     private int corpoAdministrativo;
     private int corpoDocente;
     private int corpoOutros;
@@ -22,7 +23,8 @@ public class Avaliacao {
     public Avaliacao() {
     }
 
-    public Avaliacao(int corpoAdministrativo, int corpoDocente, int corpoOutros, boolean participouEducacenso, Comissao comissao, DadoEducacional dadoEducacional, Infraestrutura infraestrutura, Dimensao dimensao, Instituicao instituicao) {
+    public Avaliacao(int versao, int corpoAdministrativo, int corpoDocente, int corpoOutros, boolean participouEducacenso, Comissao comissao, DadoEducacional dadoEducacional, Infraestrutura infraestrutura, Dimensao dimensao, Instituicao instituicao) {
+        this.versao = versao;
         this.corpoAdministrativo = corpoAdministrativo;
         this.corpoDocente = corpoDocente;
         this.corpoOutros = corpoOutros;
@@ -32,6 +34,22 @@ public class Avaliacao {
         this.infraestrutura = infraestrutura;
         this.dimensao = dimensao;
         this.instituicao = instituicao;
+    }
+
+    public ObjectId get_id() {
+        return _id;
+    }
+
+    public void set_id(ObjectId _id) {
+        this._id = _id;
+    }
+
+    public int getVersao() {
+        return versao;
+    }
+
+    public void setVersao(int versao) {
+        this.versao = versao;
     }
 
     public int getCorpoAdministrativo() {
@@ -106,18 +124,11 @@ public class Avaliacao {
         this.instituicao = instituicao;
     }
 
-    public ObjectId get_id() {
-        return _id;
-    }
-
-    public void set_id(ObjectId _id) {
-        this._id = _id;
-    }
-
     @Override
     public String toString() {
         return "Avaliacao{" +
                 "_id=" + _id +
+                ", versao=" + versao +
                 ", corpoAdministrativo=" + corpoAdministrativo +
                 ", corpoDocente=" + corpoDocente +
                 ", corpoOutros=" + corpoOutros +
@@ -130,3 +141,4 @@ public class Avaliacao {
                 '}';
     }
 }
+

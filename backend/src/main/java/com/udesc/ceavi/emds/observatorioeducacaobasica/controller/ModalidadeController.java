@@ -22,12 +22,12 @@ public class ModalidadeController {
     @Autowired
     private ModalidadeService modalidadeService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Modalidade>>> listarTodas() {
         return ResponseEntity.ok(new Response<List<Modalidade>>(this.modalidadeService.listarTodos()));
     }
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<Modalidade>> modalidadePorId(@PathVariable(name = "id") ObjectId id) {
         return ResponseEntity.ok(new Response<Modalidade>(this.modalidadeService.listarPorId(id)));
     }
@@ -56,7 +56,7 @@ public class ModalidadeController {
     }
 
 
-    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") ObjectId id) {
         System.out.println("To aqui");
         Modalidade a = this.modalidadeService.listarPorId(id);

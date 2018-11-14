@@ -8,31 +8,15 @@ import javax.validation.constraints.NotEmpty;
 public class Login {
 
     private ObjectId _id;
-
-    public ObjectId get_id() {
-        return _id;
-    }
-
-    public void set_id(ObjectId _id) {
-        this._id = _id;
-    }
-
-    @NotEmpty
     private String cnpj;
-
-    @NotEmpty
     private String senha;
 
-    private boolean admin;
-
-    public Login(ObjectId _id, @NotEmpty String cnpj, @NotEmpty String senha, boolean admin) {
-        this._id = _id;
-        this.cnpj = cnpj;
-        this.senha = senha;
-        this.admin = admin;
+    public Login() {
     }
 
-    public Login() {
+    public Login(String cnpj, String senha) {
+        this.cnpj = cnpj;
+        this.senha = senha;
     }
 
     public String getCnpj() {
@@ -51,12 +35,21 @@ public class Login {
         this.senha = senha;
     }
 
-    public boolean isAdmin() {
-        return admin;
+    public ObjectId get_id() {
+        return _id;
     }
 
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
+    public void set_id(ObjectId _id) {
+        this._id = _id;
+    }
+
+    @Override
+    public String toString() {
+        return "Login{" +
+                "_id=" + _id +
+                ", cnpj='" + cnpj + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 }
 
