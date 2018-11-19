@@ -44,11 +44,14 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
         String cnpj = ((User) authResult.getPrincipal()).getUsername();
-        String token = Jwts.builder().setSubject(cnpj)
+        String token = Jwts.builder()
+                .setSubject(cnpj)
                 .setExpiration(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
                 .signWith(SignatureAlgorithm.HS512, SecurityConstants.SECRET)
                 .compact();
-        response.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
-
+        String bearerToken = SecurityConstants.TOKEN_PREFIX + token;
+        response.getWriter().write(bearerToken);
+        response.addHeader(SecurityConstants.HEADER_STRING, bearerToken);
     }
+
 }

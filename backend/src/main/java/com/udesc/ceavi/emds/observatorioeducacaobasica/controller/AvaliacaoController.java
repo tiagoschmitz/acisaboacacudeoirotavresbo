@@ -24,9 +24,9 @@ public class AvaliacaoController {
     @Autowired
     private AvaliacaoService avaliacaoService;
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value = "admin/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Avaliacao>>> listarTodas(@AuthenticationPrincipal UserDetails userDetails) {
-        System.out.println(userDetails);
+        System.out.println("User datails " + userDetails.getPassword());
         return ResponseEntity.ok(new Response<List<Avaliacao>>(this.avaliacaoService.listarTodos()));
     }
 

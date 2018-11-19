@@ -1,6 +1,6 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.security;
 
-import com.udesc.ceavi.emds.observatorioeducacaobasica.services.implementations.LoginService;
+import com.udesc.ceavi.emds.observatorioeducacaobasica.services.implementations.CustomUserDetailService;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class JWTLoginFilter extends BasicAuthenticationFilter {
-    private final LoginService loginService;
+public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
+    private final CustomUserDetailService customUserDetailService;
 
-    public JWTLoginFilter(AuthenticationManager authenticationManager, LoginService loginService) {
+    public JWTAuthorizationFilter(AuthenticationManager authenticationManager, CustomUserDetailService customUserDetailService) {
         super(authenticationManager);
-        this.loginService = loginService;
+        this.customUserDetailService = customUserDetailService;
     }
 
     @Override
@@ -39,8 +39,11 @@ public class JWTLoginFilter extends BasicAuthenticationFilter {
         if (token == null) {
             return null;
         }
-        String cnpj = Jwts.parser().setSigningKey(SecurityConstants.SECRET).parseClaimsJws(token.replace(SecurityConstants.TOKEN_PREFIX, "")).getBody().getSubject();
-        UserDetails userDetails = loginService.loadUserByUsername(cnpj);
-        return cnpj != null ? new UsernamePasswordAuthenticationToken(cnpj, null, userDetails.getAuthorities()) : null;
+        String cnpj = Jwts.parser().setSigningKey(SecurityConstants.SECRET)
+                .parseClaimsJws(token.replace(SecurityConstants.TOKEN_PREFIX, ""))
+                .getBody()
+                .getSubject();
+        UserDetails userDetails = customUserDetailService.loadUserByUsername(cnpj);
+        return cnpj != null ? new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()) : null;
     }
 }
