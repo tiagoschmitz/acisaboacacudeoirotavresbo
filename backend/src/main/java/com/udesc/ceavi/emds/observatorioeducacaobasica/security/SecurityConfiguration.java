@@ -40,67 +40,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(customUserDetailService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(customUserDetailService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
-        System.out.println("pasesei aqui");
-        return encoder;
-    }
 
-//    private static String REALM = "MY_TEST_REALM";
-
-//    @Autowired
-//    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//
-//        auth.inMemoryAuthentication().withUser(User.withDefaultPasswordEncoder()
-//                .username("user")
-//                .password("password")
-//                .roles("USER")
-//                .build());
-//    }
-
-//    @Autowired
-//    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance()).withUser("bill").password("abc123").roles("ADMIN").and()
-//                .withUser("tom").password("abc123").roles("USER");
-//    }
-//
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//        http.cors().and().
-//                csrf().disable()
-//                .authorizeRequests()
-//                .antMatchers("/controller/**").hasRole("ADMIN")
-//                .and().httpBasic().realmName(REALM).authenticationEntryPoint(getBasicAuthEntryPoint())
-//                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);//We don't need sessions to be created.
-//    }
-//
-//    @Bean
-//    CorsConfigurationSource corsConfigurationSource() {
-//        UrlBasedCorsConfigurationSource source = new
-//                UrlBasedCorsConfigurationSource();
-//        CorsConfiguration CORSConf = new CorsConfiguration();
-//        CORSConf.applyPermitDefaultValues();
-//        CORSConf.addAllowedMethod(HttpMethod.DELETE);
-//        CORSConf.addAllowedMethod(HttpMethod.PUT);
-//
-//        source.registerCorsConfiguration("/**", CORSConf);
-//
-//        return source;
-//    }
-//
-//    @Bean
-//    public CustomBasicAuthenticationEntryPoint getBasicAuthEntryPoint() {
-//        return new CustomBasicAuthenticationEntryPoint();
-//    }
-//
-//
-//    /* To allow Pre-flight [OPTIONS] request from browser */
-//    @Override
-//    public void configure(WebSecurity web) throws Exception {
-//        web.ignoring().antMatchers(HttpMethod.OPTIONS, "/**");
-//    }
 }

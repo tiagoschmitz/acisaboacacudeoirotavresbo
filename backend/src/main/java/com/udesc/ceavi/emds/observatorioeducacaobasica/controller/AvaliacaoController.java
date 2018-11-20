@@ -21,8 +21,13 @@ import java.util.List;
 @RequestMapping(path = "/avaliacao")
 public class AvaliacaoController {
 
-    @Autowired
+
     private AvaliacaoService avaliacaoService;
+
+    @Autowired
+    public AvaliacaoController(AvaliacaoService avaliacaoService) {
+        this.avaliacaoService = avaliacaoService;
+    }
 
     @RequestMapping(value = "admin/all", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Response<List<Avaliacao>>> listarTodas(@AuthenticationPrincipal UserDetails userDetails) {

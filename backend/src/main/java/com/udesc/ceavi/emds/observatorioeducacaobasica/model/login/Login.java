@@ -7,6 +7,7 @@ import javax.validation.constraints.NotEmpty;
 public class Login {
     private ObjectId _id;
     private String cnpj;
+
     private String senha;
     private boolean isAdmin;
 
