@@ -1,0 +1,138 @@
+/*clean layout*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------- SECTION ---------------------------------- */
+
+section {
+    margin-top: 56px;
+    height: 95%;
+    overflow: hidden;
+    background-color: #B0FF6F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: green;
+}
+
+.box-form {
+    width: 80%;
+    height: 87%;
+    margin-top: -45px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 95%;
+    height: 90%;
+}
+
+.box-dados div {
+    margin-bottom: 5px;
+}
+
+.box-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 1px solid green;
+    margin-left: 7px;
+    font-size: 16px;
+}
+
+.cnpjMantenedora, .cnpjMantida {
+    width: 250px;
+}
+
+.rSocialMantenedora, .rSocialMantida {
+    width: 450px;
+}
+
+hr {
+    margin: 10px auto;
+}
+
+.nomeFantasia {
+    width: 400px;
+}
+
+.emailMantida {
+    width: 290px;
+}
+
+.endereco {
+    width: 300px;
+}
+
+.numero {
+    width: 65px;
+}
+
+.cep {
+    width: 80px;
+}
+
+.municipio {
+    width: 180px;
+}
+
+.site {
+    width: 350px;
+}
+
+.telInst {
+    width: 150px;
+}
+
+.responsavel {
+    width: 300px;
+}
+
+.secretario {
+    width: 408px;
+}
+
+.diretor {
+    width: 435px;
+}
+
+
+.depAdm {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.depAdm label {
+    margin-right: 20px;
+}
+
+.btnLogin {
+    height: 35px;
+    width: 110px;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: green;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btnLogin:hover {
+    box-shadow: 0 0 20px rgb(0, 184, 0);
+}
+/* ---------------------------------- END SECTION ---------------------------------- */

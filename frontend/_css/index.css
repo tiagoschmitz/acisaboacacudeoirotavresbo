@@ -1,0 +1,73 @@
+/*clean layout*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*fonts*/
+@font-face {font-family: "tusj"; src: url('../fonts/FFF_Tusj.ttf');}
+@font-face {font-family: "whatever it takes"; src: url("../fonts/whatever it takes.ttf");}
+
+/* ---------------------------------- SECTION ---------------------------------- */
+section {
+    margin-top: 56px;
+    height: 95%;
+    overflow: hidden;
+    background: url("../img/bg_menu.jpg") center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div {
+    text-align:center;
+    color: #FFFFFF;
+}
+
+.oeb-centro {
+    font-family: tusj, sans-serif;
+    font-size: 300px;
+    color: #FFFFFF;
+    margin-top: -80px;
+}
+
+.oeb-full-centro {
+    font-family: "whatever it takes", sans-serif;
+    font-size: 65px;
+    color: #FFFFFF;
+    margin-top: -40px;
+}
+/* ---------------------------------- END SECTION ---------------------------------- */
+/* ---------------------------------- FOOTER ---------------------------------- */
+footer {
+    width: 100%;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding-top: 5px;
+}
+.footer-links ul > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.footer-links ul > li > a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.footer-links ul > li > a:hover,
+.footer-links ul > li > a:active {
+    text-decoration-line: underline;
+    outline-color: #FFFFFF;
+}
+/* ---------------------------------- FOOTER ---------------------------------- */

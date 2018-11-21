@@ -1,0 +1,236 @@
+/*clean layout*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*fonts*/
+@font-face {font-family: "ShowcardGothic"; src: url('../fonts/showcard_gothic.TTF');}
+@font-face {font-family: "impact"; src: url("../fonts/impact.ttf");}
+
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* ---------------------------------- SECTION ---------------------------------- */
+section {
+    min-height: 100%;
+}
+
+.box-all {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B0FF6F;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.box-bg {
+    padding: 10px 10px;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/bg_login.jpg") center /contain repeat-x;
+}
+
+.box-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: #FFFFFF;
+}
+
+.box-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 350px;
+}
+
+.oeb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.oeb span {
+    display: block;
+    font-family: ShowcardGothic, sans-serif;
+    font-size: 200px;
+    color: green;
+}
+
+.oeb-text div {
+    width: 100%;
+    font-size:47px;
+    color: green;
+    float:left;
+    text-align:center;
+    font-family: impact, serif;
+}
+
+.box-login {
+    width: 35%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-form {
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 85%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.form-login {
+    margin-top: 20px;
+}
+
+.form-login a {
+    color: green;
+}
+
+.form-login a:link {
+    text-decoration: none;
+}
+
+.form-login a:hover {
+    text-decoration-line: underline;
+    outline-color: green;
+}
+
+.form-login > div {
+    padding: 7px 0 7px 0;
+}
+
+.input-login {
+    width: 250px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 1px solid green;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.input-pass {
+    width: 250px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 1px solid green;
+    font-size: 20px;
+}
+
+.box-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnLogin {
+    height: 40px;
+    width: 120px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: green;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btnLogin:hover {
+    box-shadow: 0 0 20px rgb(0, 184, 0);
+}
+
+.login, .senha {
+    font-size: 28px;
+}
+
+.help > div {
+    padding: 3px 0 3px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-login {
+    color: red;
+}
+/* ---------------------------------- END SECTION ---------------------------------- */
+/* ---------------------------------- FOOTER ---------------------------------- */
+footer {
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: #B0FF6F;
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos > div {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding-top: 5px;
+}
+.footer-links ul > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.footer-links ul > li > a {
+    text-decoration: none;
+    color: green;
+}
+.footer-links ul > li > a:hover,
+.footer-links ul > li > a:active {
+    text-decoration-line: underline;
+    outline-color: green;
+}
+/* ---------------------------------- END FOOTER ---------------------------------- */
