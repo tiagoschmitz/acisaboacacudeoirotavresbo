@@ -1,0 +1,110 @@
+/*clean layout*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*fonts*/
+@font-face {font-family: "tusj"; src: url('../fonts/FFF_Tusj.ttf');}
+@font-face {font-family: "whatever it takes"; src: url("../fonts/whatever it takes.ttf");}
+
+body, html {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* ---------------------------------- MENU ---------------------------------- */
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav {
+    height: 55px;
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+    background: url("../img/bg_menu.jpg") center;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.menu-content {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-content > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px 0 15px;
+}
+
+.menu-content > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.oeb-index, .menu-palavra {
+    font-family: tusj, sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.oeb-full {
+    font-family: "whatever it takes", sans-serif;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.menu-palavra:hover {
+    color: #B0FF6F;
+}
+
+.menu-float {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: -2000px;
+}
+
+.menu-slide {
+    width: 90%;
+    font-family: tusj, serif;
+    font-size: 27px;
+    color: #FFFFFF;
+}
+
+.menu-slide > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-slide > div > div {
+    height: 110px;
+    width: 170px;
+    background: url("../img/bg_menu_link.jpg") center / contain no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-slide > div > div:hover a{
+    color: #B0FF6F;
+}
+/* ---------------------------------- END MENU ---------------------------------- */
