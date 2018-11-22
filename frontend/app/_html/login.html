@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../_css/login.css">
+    <link rel="stylesheet" href="/_css/app.min.css">
+    <!--<link rel="stylesheet" href="../_css/login.css">-->
+
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -15,7 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!-- javascript -->
-    <script src="../_js/login.js" defer></script>
+    <script src="/_js/app.min.js" defer></script>
+    <!--<script src="../_js/login.js" defer></script>-->
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -23,56 +26,65 @@
     <title>OEB - Observatório da Educação Básica</title>
 </head>
 <body>
-    <section>
-        <article class="box-all">
-            <div class="content">
-                <div class="box-content">
-                    <div class="box-bg">
-                        <div class="box-logo">
-                            <div class="box-text">
-                                <div class="oeb"><span>OEB</span></div>
-                                <div class="oeb-text">
-                                    <div>Observatório da</div>
-                                    <div>Educação Básica</div>
+<section>
+    <article class="box-all">
+        <div class="content">
+            <div class="box-content">
+                <div class="box-bg">
+                    <div class="box-logo">
+                        <div class="box-text">
+                            <div class="oeb"><span>OEB</span></div>
+                            <div class="oeb-text">
+                                <div>Observatório da</div>
+                                <div>Educação Básica</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-login">
+                        <div class="box-form">
+                            <form action="#" method="POST" class="form-login">
+                                <div><label class="login">Login <input id="user" type="text" class="input-login"
+                                                                       name="cnpj"
+                                                                       required autofocus></label></div>
+                                <div><label class="senha">Senha <input id="senha" type="password" class="input-pass"
+                                                                       name="senha" required></label></div>
+                                <div class="box-btn">
+                                    <button type="submit" class="btnLogin">Entrar</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box-login">
-                            <div class="box-form">
-                                <form action="#" method="POST" class="form-login">
-                                    <div><label class="login">Login <input type="text" class="input-login" name="login" required autofocus></label></div>
-                                    <div><label class="senha">Senha <input type="password" class="input-pass" name="password" required></label></div>
-                                    <div class="box-btn"><button type="submit" class="btnLogin">Entrar</button></div>
-                                    <div class="help">
-                                        <div><div><a href="#" class="esqueceuSenha">Esqueçeu seu login ou senha?</a></div></div>
-                                        <div><div><a href="#" class="cadastro">Faça seu cadastro</a></div></div>
+                                <div class="help">
+                                    <div>
+                                        <div><a href="#" class="esqueceuSenha">Esqueçeuuuu seu login ou senha?</a></div>
                                     </div>
-                                    <div class="msg error-login">Login e/ou senha incorreto(s)!</div>
-                                </form>
-                            </div>
+                                    <div>
+                                        <div><a href="#" class="cadastro">Faça seu cadastro</a></div>
+                                    </div>
+                                </div>
+                                <div class="msg error-login">Login e/ou senha incorreto(s)!</div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </article>
-        <footer>
-            <div class="footer-links">
-                <div class="logos">
-                    <div>
-                        <div class="cee-logo"><img src="../img/brasao_SC_CEE.png" height="35"/></div>
-                        <div class="empds-logo"><img src="../img/EMPDS.png" height="35"/></div>
-                        <div class="udesc-logo"><img src="../img/UDESC_logo.png" height="35"/></div>
-                    </div>
+        </div>
+    </article>
+    <footer>
+        <div class="footer-links">
+            <div class="logos">
+                <div>
+                    <div class="cee-logo"><img src="../img/brasao_SC_CEE.png" height="35"/></div>
+                    <div class="empds-logo"><img src="../img/EMPDS.png" height="35"/></div>
+                    <div class="udesc-logo"><img src="../img/UDESC_logo.png" height="35"/></div>
                 </div>
-                <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Ajuda/Contato</a></li>
-                    <li><a href="#">Desenvolvedores</a></li>
-                    <li><a href="#">Termos de uso</a></li>
-                    <li><a href="#">Politica de Privacidade</a></li>
-                </ul>
             </div>
-        </footer>
-    </section>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Ajuda/Contato</a></li>
+                <li><a href="#">Desenvolvedores</a></li>
+                <li><a href="#">Termos de uso</a></li>
+                <li><a href="#">Politica de Privacidade</a></li>
+            </ul>
+        </div>
+    </footer>
+</section>
 </body>
 </html>

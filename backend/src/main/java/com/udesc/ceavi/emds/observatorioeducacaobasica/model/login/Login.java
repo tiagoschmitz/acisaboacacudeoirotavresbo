@@ -1,24 +1,31 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.model.login;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import org.bson.types.ObjectId;
 import javax.validation.constraints.NotEmpty;
-
+@JsonRootName("login")
 public class Login {
     private ObjectId _id;
+    @JsonProperty("cnpj")
     private String cnpj;
-
+    @JsonProperty("senha")
     private String senha;
+
     private boolean isAdmin;
 
     public Login() {
     }
 
-    public Login(String cnpj, String senha, boolean isAdmin) {
+    @JsonCreator
+    public Login(@JsonProperty("cnpj") String cnpj, @JsonProperty("senha") String senha, @JsonProperty("admin") boolean isAdmin) {
         this.cnpj = cnpj;
         this.senha = senha;
         this.isAdmin = isAdmin;
     }
+
 
     public String getCnpj() {
         return cnpj;
