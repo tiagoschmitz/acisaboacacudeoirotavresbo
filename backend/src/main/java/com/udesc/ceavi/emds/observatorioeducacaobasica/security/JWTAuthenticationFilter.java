@@ -1,6 +1,8 @@
 package com.udesc.ceavi.emds.observatorioeducacaobasica.security;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Date;
 
 import javax.servlet.FilterChain;
@@ -35,7 +37,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         try {
             System.out.println("passou em attemptAuthentication");
-
+//            BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+//            String json ="";
+//            do {
+//                json = br.readLine();
+//                System.out.println(json);
+//            }
+//            while(json!=null);
             Login login = new ObjectMapper().readValue(request.getInputStream(), Login.class);
             System.out.println("------------->" + login.getSenha());
             return this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(login.getCnpj(), login.getSenha()));

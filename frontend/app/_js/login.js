@@ -1,26 +1,20 @@
 $(function () {
     $(".form-login").submit(function (e) {
         e.preventDefault();
-        console.log($(".form-login").serialize());
         $.ajax({
             type: 'post',
             url: 'http://localhost:8080/login',
-            data: $(".form-login").serialize(),
+            data: JSON.stringify({"cnpj": $("#user").val(), "senha": $("#senha").val()}),
             dataType: 'json',
-            contentType: "application/javascript; charset=utf-8",
+            contentType: "application/json",
             success: function (json) {
-               if(json.status=='OK'){
-                   alert('sucesso');
-               }else{
-                   alert('não logou');
-               }
+                console.log(json.status);
+                // if (json.status == 'OK') {
+                //     window.location.href="http://www.example.com";
+                // } else {
+                //     alert('não logou');
+                // }
             }
         })
-        // data = {"cnpj": "5", "senha": "123"};
-        // $.post("http://localhost:8080/login", function (data) {
-        //     alert("Data loaded " + data)
-        // });
-
     })
-
 });
