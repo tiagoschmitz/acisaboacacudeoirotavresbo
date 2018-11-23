@@ -7,14 +7,20 @@ $(function () {
             data: JSON.stringify({"cnpj": $("#user").val(), "senha": $("#senha").val()}),
             dataType: 'json',
             contentType: "application/json",
-            success: function (json) {
-                console.log(json.status);
-                // if (json.status == 'OK') {
-                //     window.location.href="http://www.example.com";
-                // } else {
-                //     alert('não logou');
-                // }
+            statusCode: {
+                200: function (response) {
+                    response.responseText;
+                    // window.location.href = "cadastro.html";
+                    window.location.replace("http://localhost:3000/index.html");
+                }
             }
+            // success: function (json, text) {
+            //     window.location.href = "index.html";
+            //     console.log(text);
+            // },
+            // error: function (request, status, error) {
+            //     console.log("Erro " + error);
+            // }
         })
     })
 });
