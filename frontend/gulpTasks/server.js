@@ -13,14 +13,22 @@ gulp.task('watch', () => {
 gulp.task('server', ['watch'], () => {
     return gulp.src('public')
         .pipe(webserver({
-            livereload: true,
+            // livereload: true,
             host: 'localhost',
-            fallback: '_html/login.html',
+            fallback: '_html/index.html',
             port: 3000,
-            open: true,
-            directoryListing: {
-                enable: true,
-                path: 'example'
-            }
+            open: 'http://localhost:3000/_html/index.html',
+            // path: "public/_html/index.html",
+            // proxies: [
+            //     {
+            //         source: '/login', target: 'http://localhost:3000/cadastro.html',options:{
+            //             headers:{'abc':'cadastro'}
+            //         }
+            //     }
+            // ],
+            // directoryListing: {
+            //     enable: true,
+            //     // path: '_html/*.html'
+            // }
         }))
 })
