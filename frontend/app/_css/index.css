@@ -110,6 +110,10 @@ section {
     margin-top: 20px;
 }
 
+.form-login > div {
+    color: green;
+}
+
 .form-login a {
     color: green;
 }
@@ -182,7 +186,7 @@ section {
     align-items: center;
 }
 
-.error-login {
+.error-login > div{
     color: red;
 }
 /* ---------------------------------- END SECTION ---------------------------------- */
