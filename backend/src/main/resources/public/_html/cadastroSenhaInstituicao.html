@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../_css/cadastro.css">
+    <!--<link rel="stylesheet" href="../_css/cadastro.css">-->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="../_js/cadastroSenhaInstituicao.js" defer></script>
+    <!--<script src="../_js/cadastro.js" defer></script>-->
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- title -->
+    <title>OEB - Observatório da Educação Básica</title>
+</head>
+<body>
+<div class="menuFixo"></div>
+<section>
+    <div class="box-login">
+        <div class="box-form">
+            <form action="#" method="POST" class="form-login">
+                <div><label class="login">CNPJ da Mantida <input id="cnpjAdm" type="text" class="input-login"
+                                                                 name="cnpj"
+                                                                 required autofocus></label></div>
+                <div><label class="senha">Senha <input id="senhaAdm" type="text" class="input-pass"
+                                                       name="senha" required></label></div>
+                <div class="box-btn">
+                    <button type="submit" class="btnLogin" id="botaoAddAdm">Adicionar</button>
+                </div>
+                <div class="msg error-login">
+                    <div>Login e/ou senha incorreto(s)!</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div id="tableLogins">
+
+    </div>
+</section>
+<div class="footerFixo"></div>
+</body>
+</html>

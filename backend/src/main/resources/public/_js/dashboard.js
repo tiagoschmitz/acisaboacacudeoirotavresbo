@@ -1,6 +1,6 @@
 $(function () {
 
     //chamada do menu fixo
-    $(".menuFixo").load("menuFixo.html");
+    $(".menuFixo").load("admin.html");
 
 });

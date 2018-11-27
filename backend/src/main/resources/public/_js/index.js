@@ -9,11 +9,12 @@ $(function () {
             contentType: "application/json",
             statusCode: {
                 200: function (response) {
-                    response.responseText;
-                    // window.location.href = "cadastro.html";
-                    if(window.location.href.includes('_html/' )){
+                    let token = response.responseText;
+                    console.log(token)
+                    sessionStorage.setItem("token", token);
+                    if (window.location.href.includes('_html/')) {
                         window.location.replace("dashboard.html");
-                    }else{
+                    } else {
                         window.location.replace("_html/dashboard.html");
                     }
                 }
