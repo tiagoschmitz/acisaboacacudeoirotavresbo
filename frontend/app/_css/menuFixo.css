@@ -9,7 +9,6 @@
 @font-face {font-family: "whatever it takes"; src: url("../fonts/whatever it takes.ttf");}
 
 body, html {
-    overflow: hidden;
     height: 100%;
 }
 
@@ -83,7 +82,7 @@ nav {
 .menu-slide {
     width: 90%;
     font-family: tusj, serif;
-    font-size: 27px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 

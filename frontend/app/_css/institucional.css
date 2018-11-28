@@ -1,0 +1,85 @@
+/*clean layout*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menuFixo {
+    position: fixed;
+    margin-top: -55px;
+}
+
+/* ---------------------------------- SECTION ---------------------------------- */
+
+section {
+    height: 100%;
+    margin-top: 55px;
+    background-color: #B0FF6F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: green;
+}
+
+.box-form {
+    width: 80%;
+    height: 100%;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 95%;
+    height: 100%;
+}
+
+.box-table {
+    margin: 15px 0 15px 0;
+}
+
+.tb, th, td {
+    margin: 15px;
+    border: 1px solid green;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.th-conceito > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.th-conceito > div > div {
+    margin-right: 5px;
+}
+
+.btnLogin {
+    height: 35px;
+    width: 110px;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: green;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btnLogin:hover {
+    box-shadow: 0 0 20px rgb(0, 184, 0);
+}
+/* ---------------------------------- END SECTION ---------------------------------- */

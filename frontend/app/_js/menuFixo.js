@@ -7,7 +7,7 @@ $(function () {
      */
     $(".menu-link").on("click", function () {
         if (menuOpen === false) {
-            $("nav").animate({"height": "550px"}, 250);
+            $("nav").animate({"height": "200px"}, 250);
             $(".menu-float").animate({"margin-left": "0"}, 400);
             $(".seta").html('<img src="../img/seta cima giz.png" height="40"/>');
             menuOpen = true;
