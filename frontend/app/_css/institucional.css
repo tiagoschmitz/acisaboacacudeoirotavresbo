@@ -12,7 +12,7 @@
 /* ---------------------------------- SECTION ---------------------------------- */
 
 section {
-    height: 1000px;
+    min-height: 100%;
     margin-top: 55px;
     background-color: #B0FF6F;
     display: flex;
@@ -50,8 +50,21 @@ p {
     margin: 15px 0 35px 0;
 }
 
-.tb, th, td {
+.tb {
+    width: 97%;
     margin: 15px;
+    border-collapse: collapse;
+}
+
+.colConceito {
+    width: 11%;
+}
+
+tr:nth-child(even) {
+    background-color: #c1ff93;
+}
+
+.tb, th, td {
     border: 1px solid green;
 }
 
@@ -73,6 +86,10 @@ td div {
 
 .th-conceito > div > div {
     margin-right: 5px;
+}
+
+.box-btn {
+    margin-bottom: 25px;
 }
 
 .btnLogin {
