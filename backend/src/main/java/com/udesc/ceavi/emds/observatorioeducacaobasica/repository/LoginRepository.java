@@ -9,8 +9,4 @@ import java.util.List;
 public interface LoginRepository extends MongoRepository<Login, String> {
     Login findByCnpj(String cnpj);
 
-//    List<Login> getAll();
-
-//    void removeBy(ObjectId objectId);
-
 }

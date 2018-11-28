@@ -25,6 +25,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         String header = request.getHeader(SecurityConstants.HEADER_STRING);
+        System.out.println("Header "+header);
         if (header == null || !header.startsWith(SecurityConstants.TOKEN_PREFIX)) {
             chain.doFilter(request, response);
             return;
@@ -46,7 +47,6 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
                 .getSubject();
 
         UserDetails userDetails = customUserDetailService.loadUserByUsername(cnpj);
-        System.out.println("getAuthenticationToken cnpj " + cnpj);
         System.out.println("getAuthenticationToken userdetails " + userDetails);
         return cnpj != null ? new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities()) : null;
     }

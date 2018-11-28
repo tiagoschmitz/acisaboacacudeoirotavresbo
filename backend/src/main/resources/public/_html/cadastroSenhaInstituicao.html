@@ -7,7 +7,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../_css/cadastro.css">
-    <!--<link rel="stylesheet" href="../_css/cadastro.css">-->
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -29,7 +28,7 @@
 <section>
     <div class="box-login">
         <div class="box-form">
-            <form action="#" method="POST" class="form-login">
+            <form method="POST" class="form-login">
                 <div><label class="login">CNPJ da Mantida <input id="cnpjAdm" type="text" class="input-login"
                                                                  name="cnpj"
                                                                  required autofocus></label></div>
@@ -38,17 +37,22 @@
                 <div class="box-btn">
                     <button type="submit" class="btnLogin" id="botaoAddAdm">Adicionar</button>
                 </div>
-                <div class="msg error-login">
-                    <div>Login e/ou senha incorreto(s)!</div>
-                </div>
+                <!--<div class="msg error-login">-->
+                <!--<div>Login e/ou senha incorreto(s)!</div>-->
+                <!--</div>-->
             </form>
         </div>
+        <br><br>
+        <hr>
+        <br><br>
+        <div>
+            <div id="tableLogins">
+            </div>
+        </div>
     </div>
-    <br>
-    <div id="tableLogins">
 
-    </div>
 </section>
+
 <div class="footerFixo"></div>
 </body>
 </html>
