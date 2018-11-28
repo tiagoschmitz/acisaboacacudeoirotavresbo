@@ -10,8 +10,8 @@ $(function () {
             statusCode: {
                 200: function (response) {
                     response.responseText;
-                    // window.location.href = "cadastro.html";
-                    if(window.location.href.includes('_html/' )){
+                    // window.location.href = "institucional.html";
+                    if(window.location.href.includes('_html/')){
                         window.location.replace("dashboard.html");
                     }else{
                         window.location.replace("_html/dashboard.html");
