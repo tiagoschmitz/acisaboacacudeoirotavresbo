@@ -1,5 +1,4 @@
 $(() => {
-
     //chamada do menu fixo
     $(".menuFixo").load("menuFixo.html");
 
@@ -8,22 +7,19 @@ $(() => {
 
 });
 
-
 $(() => {
-
     $("#botaoAddAdm").submit((e) => {
         let j = JSON.stringify({
             "cnpj": $("#cnpjAdm").val(),
             "senha": $("#senhaAdm").val(),
         })
-       alert(j)
-        console.log(sessionStorage.getItem("token"))
+        console.log(sessionStorage.getItem("token"));
         e.preventDefault();
         $.ajax({
             headers: {
                 'Authorization': sessionStorage.getItem("token")
             },
-            type: 'post',
+            type: 'POST',
             url: 'http://localhost:8080/logins/cadastro',
             data: JSON.stringify({
                 "cnpj": $("#cnpjAdm").val(),
@@ -33,8 +29,8 @@ $(() => {
             contentType: "application/json",
             statusCode: {
                 200: (response) => {
-                    response.responseText;
-                }
+                    console.log(response.responseText);
+                },
             }
         })
     })
@@ -44,7 +40,27 @@ $(document).ready(() => {
     console.log(sessionStorage.getItem("token"))
 })
 
-// $(document).ready(function () {
+$(document).ready(function () {
+    $.ajax({
+        // headers: {
+        //     'Authorization': sessionStorage.getItem("token")
+        // },
+        type: 'GET',
+        url: 'http://localhost:8080/logins/all',
+        dataType: 'json',
+        contentType: "application/json",
+        statusCode: {
+            200: (response) => {
+                let dados = response.data;
+                var $table = $('<table/>');
+                $.each(dados, function (index, valor) {
+                    $table.append('<tr><td>' + valor.cnpj + '</td><td>' + valor.senha + '</td></tr>');
+                });
+                $('#tableLogins').append($table);
+            },
+        }
+    })
+})
 //     let dados = [
 //         {
 //             "cnpj": "5",
