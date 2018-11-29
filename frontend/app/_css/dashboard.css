@@ -10,8 +10,7 @@
 
 /* ---------------------------------- SECTION ---------------------------------- */
 section {
-    margin-top: 56px;
-    height: 95%;
+    height: 100%;
     overflow: hidden;
     background: url("../img/bg_menu.jpg") center;
     display: flex;
