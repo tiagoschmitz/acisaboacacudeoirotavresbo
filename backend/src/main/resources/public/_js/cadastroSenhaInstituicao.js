@@ -42,9 +42,9 @@ $(document).ready(() => {
 
 $(document).ready(function () {
     $.ajax({
-        headers: {
-            'Authorization': sessionStorage.getItem("token")
-        },
+        // headers: {
+        //     'Authorization': sessionStorage.getItem("token")
+        // },
         type: 'GET',
         url: 'http://localhost:8080/logins/all',
         dataType: 'json',
