@@ -1,0 +1,153 @@
+/*clean layout*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menuFixo {
+    position: fixed;
+    margin-top: -55px;
+}
+
+/* ---------------------------------- SECTION ---------------------------------- */
+
+section {
+    min-height: 100%;
+    margin-top: 55px;
+    background-color: #B0FF6F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: green;
+}
+
+.box-form {
+    width: 80%;
+    height: 100%;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 95%;
+    height: 100%;
+}
+
+h1 {
+    margin: 10px 0 10px 0;
+}
+
+p {
+    text-align: justify;
+}
+
+.box-table {
+    margin: 15px 0 30px 0;
+}
+
+.tb {
+    width: 97%;
+    margin: 15px;
+    border-collapse: collapse;
+}
+
+.colConceito {
+    width: 11%;
+}
+
+tr:nth-child(even) {
+    background-color: #c1ff93;
+}
+
+.tb, th, td {
+    border: 1px solid green;
+}
+
+th, td {
+    padding: 5px;
+}
+
+td div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.th-conceito > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.th-conceito > div > div {
+    margin-right: 5px;
+}
+
+.linhaConceitoFinalIndicador {
+    font-size: 18px;
+}
+
+.colConceitoIndicador {
+    text-align: right;
+}
+
+.conceitoFinalDimensao {
+    border: 1px solid green;
+    width: 100%;
+    margin-top: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.conceitoFinalDimensao > div {
+    margin-left: 15px;
+}
+
+.relatoSobreDimensao {
+    margin-top: 15px;
+}
+
+textarea {
+    width: 98%;
+    padding: 10px;
+}
+
+.box-btn {
+    margin: 20px 0px 25px 0px;
+}
+
+.btnLogin {
+    height: 35px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: green;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btnLogin:hover {
+    box-shadow: 0 0 20px rgb(0, 184, 0);
+}
+
+.btnLogin div {
+margin-right: 5px;
+}
+
+.btnLogin i {
+    font-size: 25px;
+}
+/* ---------------------------------- END SECTION ---------------------------------- */
