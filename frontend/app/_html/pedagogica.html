@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <!--<link rel="stylesheet" href="/_css/app.min.css">-->
+    <link rel="stylesheet" href="../_css/pedagogica.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- javascript -->
+    <!--<script src="/_js/app.min.js" defer></script>-->
+    <script src="../_js/pedagogica.js" defer></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- title -->
+    <title>OEB - Observatório da Educação Básica</title>
+</head>
+<body>
+<div class="menuFixo"></div>
+<section>
+    <div class="box-form">
+        <form action="POST" class="form-ppp">
+            <h1>3. Pedagógica</h1>
+            <div class="instConceito">
+                <p>
+                    Avalia a forma de preparação do plano de ensino, das aulas, das metodologias e estratégias de ensino utilizadas, da avaliação da aprendizagem e do domínio tecnológico dos docentes.
+                </p>
+            </div>
+            <div class="box-table">
+                <fieldset>
+                    <legend><h4>3.1 Preparação do plano de ensino e das aulas pelos professores</h4></legend>
+                    <table class="tb tbPPP">
+                        <tr>
+                            <th>Indicador</th>
+                            <th class="th-conceito"><div><div>Conceito</div><i class="far fa-question-circle"></i></div></th>
+                        </tr>
+                        <tr>
+                            <td>1. Elaboram o plano de ensino de acordo com os critérios propostos pela escola;</td>
+                            <td class="colConceito">
+                                <div>
+                                    <select name="1.1" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2. Disponibilizam previamente o plano de ensino da área, ou disciplina, aos alunos e comunidade escolar;</td>
+                            <td>
+                                <div>
+                                    <select name="1.2" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3. Planejam coletivamente unidades de estudo, dentro das áreas de conhecimento ou disciplinas;</td>
+                            <td>
+                                <div>
+                                    <select name="1.3" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4. Prevêem a utilização de laboratórios e outros espaços, recursos tecnológicos e didáticos de forma sistemática;</td>
+                            <td>
+                                <div>
+                                    <select name="1.4" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5. Estabelecem a relação dos conteúdos e atividades com os objetivos de aprendizagem previstos para a área de conhecimento, ou disciplina;</td>
+                            <td>
+                                <div>
+                                    <select name="1.5" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6. Socializam com os alunos a organização e desenvolvimento da cada unidade de estudo, situando-os sobre a sequência de atividades, os meios e 
+								ferramentas a serem utilizadas, as tarefas s serem cumpridas e os objetivos de aprendizagem a serem alcançados;</td>
+                            <td>
+                                <div>
+                                    <select name="1.6" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7. Planejam diariamente suas aulas e tem clareza dos objetivos de conhecimento, habilidades e atitudes a serem alcançados;</td>
+                            <td>
+                                <div>
+                                    <select name="1.7" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="linhaConceitoFinalIndicador">
+                            <td class="colConceitoIndicador"><strong>Conceito final do indicador</strong></td>
+                            <td>
+                                <div class="resultIndicador">
+                                    <strong>0</strong>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div class="box-table">
+                <fieldset>
+                    <legend><h4>3.2 Metodologias e estratégias de ensino utilizadas</h4></legend>
+                    <table class="tb tbRegEscolar">
+                        <tr>
+                            <th>Indicador</th>
+                            <th class="th-conceito"><div><div>Conceito</div><i class="far fa-question-circle"></i></div></th>
+                        </tr>
+                        <tr>
+                            <td>1. Utilizam metodologias que garantem a participação ativa dos alunos no processo de aprendizagem;</td>
+                            <td class="colConceito">
+                                <div>
+                                    <select name="1.1" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2. Utilizam técnicas e estratégias que dinamizem as aulas e estimulem os alunos ao estudo;</td>
+                            <td>
+                                <div>
+                                    <select name="1.2" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3. Diversificam as técnicas e estratégias de ensino;</td>
+                            <td>
+                                <div>
+                                    <select name="1.3" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4. Utilizam diferentes instrumentos de ensino;</td>
+                            <td>
+                                <div>
+                                    <select name="1.4" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr class="linhaConceitoFinalIndicador">
+                            <td class="colConceitoIndicador"><strong>Conceito final do indicador</strong></td>
+                            <td>
+                                <div class="resultIndicador">
+                                    <strong>0</strong>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div class="box-table">
+                <fieldset>
+                    <legend><h4>3.3 Avaliação de aprendizagem</h4></legend>
+                    <table class="tb tbAPPeCD">
+                        <tr>
+                            <th>Indicador</th>
+                            <th class="th-conceito"><div><div>Conceito</div><i class="far fa-question-circle"></i></div></th>
+                        </tr>
+                        <tr>
+                            <td>1. É coerente com os objetivos da aprendizagem da área do conhecimento, ou disciplina;</td>
+                            <td class="colConceito">
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2. Serve para orientar a aprendizagem do estudante, para além dos critérios classificatórios;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3. É diagnóstica e os intrumentos de avaliação levantam dados que são analisados apresentando indicadores para tomadas de decisões pedagógicas;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4. É utilizada para o acompanhamento do desempenho individual contínuo do estudante;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5. Diversificam as atividades avaliativas;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>6. Buscam coerência entre as atividades avaliativas e os objetos da aprendizagem;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>7. É entendida como processo e não se restringe a únicos momentos estanques de provas e notas;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>8. Resulta em um processo de comunicação dos dados da avaliação que orientam os estudantes e os pais 
+								quanto às medidas a serem adotadas para a melhoria do desenvolvimento do estudante;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>9. Resulta em análises dos dados bimestrais ou trimestrais pela escola, alterando formas e processos 
+								de ensino, para melhoria dos resultados da aprendizagem dos estudantes;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>10. É objeto de discussão e apreciação nos conselhos de classe;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>11. É coerente com o que estabelece o regimento da escola;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr class="linhaConceitoFinalIndicador">
+                            <td class="colConceitoIndicador"><strong>Conceito final do indicador</strong></td>
+                            <td>
+                                <div class="resultIndicador">
+                                    <strong>0</strong>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div class="box-table">
+                <fieldset>
+                    <legend><h4>3.4 Domínio tecnológico</h4></legend>
+                    <table class="tb tbEntEstudantil">
+                        <tr>
+                            <th>Indicador</th>
+                            <th class="th-conceito"><div><div>Conceito</div><i class="far fa-question-circle"></i></div></th>
+                        </tr>
+                        <tr>
+                            <td>1. Existe tecnologia educacional adequada, disponível aos docentes e estudantes;</td>
+                            <td class="colConceito">
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2. Há uso das tecnologias de informação para melhorar a comunicação entre escola e docentes;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3. Há uso das tecnologias de informação para melhorar a comunicação entre docentes e estudantes;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4. Há uso das tecnologias de informação para melhorar a comunicação escola e pais;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5. A escola tem incorporada em sua cultura a exigência de utilização de ferramentas e recursos tecnológicos no processo de ensino;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6. Os recursos tecnológicos utilizados são adequados à natureza dos conhecimentos de cada área, ou disciplina;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>7. Os docentes utilizam as ferramentas e recursos tecnológicos nas aulas;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+						<tr>
+                            <td>8. Os docentes receberam/recebem capacitação para o uso de recursos tecnológicos;</td>
+                            <td>
+                                <div>
+                                    <select name="1.9" title="">
+                                        <option value="conceito">SIM</option>
+                                        <option value="conceito">NÃO</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="linhaConceitoFinalIndicador">
+                            <td class="colConceitoIndicador"><strong>Conceito final do indicador</strong></td>
+                            <td>
+                                <div class="resultIndicador">
+                                    <strong>0</strong>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+				</div>
+            <div class="conceitoFinalDimensao">
+                <div><strong>Conceito final da dimensão Institucional</strong></div>
+                <div><strong>0</strong></div>
+            </div>
+            <div class="relatoSobreDimensao">
+                <div><strong>Relato global dos avaliadores sobre a dimensão Institucional</strong></div>
+                <div><textarea name="relatoInstitucional" class="relatoInstitucional" rows="8"></textarea></div>
+            </div>
+            <div class="box-btn">
+                <button type="submit" class="btnLogin"><div>Próximo</div><i class="fas fa-angle-double-right"></i></button>
+            </div>
+        </form>
+    </div>
+</section>
+<div class="footerFixo"></div>
+</body>
+</html>
